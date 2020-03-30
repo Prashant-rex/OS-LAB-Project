@@ -1,4 +1,3 @@
-
 #include<iostream>
 using namespace std;
 
@@ -36,10 +35,10 @@ void Details()
 	cout<<"Enter The Number of Ingredients needed by Each Chef to make their respective dish: ";
 	cin>>Ingredient_needed;
 	cout<<"\n";	
-	Check(chef,Ingredient_needed,reqf);	
+	Check(chef,Ingredient_needed);	
 }
 
-void Check(int x,int y, int z)
+void Check(int x,int y)
 {
 if(x<=0 || y<=0)
     {
