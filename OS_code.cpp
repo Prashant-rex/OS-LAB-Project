@@ -2,7 +2,8 @@
 using namespace std;
 
 void Details();
-void Check(int,int,int); 
+void Check(int,int); 
+void Checklimit(int,int);
 
 int CalculateIngredients(int process, int need) 
 { 
@@ -21,6 +22,7 @@ int main()
 	cout<<"Enter the maximum number of resorces that can be kept in the kitchen : ";
 	cin>>Ingredient_limit;
 	cout<<"\n";
+	Checklimit(Chef_limit,Ingredient_limit);
     Details();
     reqf=CalculateIngredients(chef, Ingredient_needed);
 	cout << "Number of Ingredients required so that each Chef can make his dish without getting struck in a deadlock should be : "<<reqf;
@@ -43,6 +45,7 @@ void Check(int x,int y)
 if(x<=0 || y<=0)
     {
     	cout<<"Invalid, please enter a valid entry.\n";
+    	cout<<"\n";
     	Details();	
 	}
 if(y>Ingredient_limit)
@@ -58,4 +61,14 @@ if(x>Chef_limit)
 		Details();
 	}
 
+}
+
+void Checklimit(int x,int y)
+{
+if(x<=0 || y<=0)
+    {
+    	cout<<"Invalid, The minimum number of chefs or ingredients cannot be less than 0\n";
+    	cout<<"\n";
+    	Details();	
+	}
 }
