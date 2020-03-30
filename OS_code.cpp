@@ -1,3 +1,4 @@
+
 #include<iostream>
 using namespace std;
 
@@ -57,10 +58,5 @@ if(x>Chef_limit)
 		cout<<"\n";
 		Details();
 	}
-if(z>Ingredient_limit)
-	{
-		cout<<"Overflow, The kitchen can't have this many resources.\n";
-		cout<<"\n";
-		Details();
-	}
+
 }
